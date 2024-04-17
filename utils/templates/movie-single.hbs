@@ -1,0 +1,30 @@
+<style>
+  body { padding: 10px; } h1 { text-align: center } .container { display: flex;
+  flex-direction: column; gap: 20px; } .details-container { display: flex;
+  justify-content: space-between; gap: 5px;} .movie-title {font-size: 20px;
+  color: #000; font-weight: bold; text-decoration: underline;
+  text-underline-offset: 2px} span {font-size: 18px} img {width: 600px}
+  .img-container {width: 100%; display: flex; justify-content: center}
+</style>
+<html>
+  <body>
+    <h1>
+      {{title}}
+    </h1>
+    <div class="container">
+      <div class="details-container">
+        <span>
+          Release date:
+          {{release_date}}
+        </span>
+        <span>
+          Average vote:
+          {{vote_average}}
+        </span>
+      </div>
+      <div class="img-container">
+        <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" />
+      </div>
+    </div>
+  </body>
+</html>

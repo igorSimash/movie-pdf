@@ -1,0 +1,31 @@
+<style>
+  body { padding: 10px; } h1 { text-align: center } .container { display: flex;
+  flex-direction: column; gap: 20px; } .movie-container { display: flex;
+  flex-direction: column; gap: 5px;} .movie-title {font-size: 20px; color: #000;
+  font-weight: bold; text-decoration: underline; text-underline-offset: 2px}
+  span {font-size: 18px}
+</style>
+<html>
+  <body>
+    <h1>
+      Movie list
+    </h1>
+    <div class="container">
+      {{#each results as |movie|}}
+        <div class="movie-container">
+          <a class="movie-title" href="{{../routeUrl}}/{{movie.id}}">
+            {{movie.title}}
+          </a>
+          <span>
+            Release date:
+            {{movie.release_date}}
+          </span>
+          <span>
+            Average vote:
+            {{movie.vote_average}}
+          </span>
+        </div>
+      {{/each}}
+    </div>
+  </body>
+</html>
